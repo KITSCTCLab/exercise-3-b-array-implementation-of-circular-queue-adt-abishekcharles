@@ -1,5 +1,5 @@
 class MyCircularQueue:
-    def _init_(self, size: int):
+    def __init__(self, size: int):
         # Write code here
         self.queue = [0] * size
         self.size = size
@@ -19,7 +19,7 @@ class MyCircularQueue:
 
     def dequeue(self) -> bool:
         # Write code here
-        if self.is_empty():
+        if self.is_empty(): 
             return False
         if self.front == self.rear:
             self.front, self.rear = -1, -1
@@ -38,7 +38,7 @@ class MyCircularQueue:
         if not self.is_empty():
             return self.queue[self.rear]
         return -1
-   
+    
     def is_empty(self):
         # Write code here
         return self.front == -1
